@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  @font-face {
+    font-family: "NeueAlteGrostek";
+    src: local("NeueAlteGrostek"), url("./fonts/NeueAlteGrotesk-Bold.ttf") format("truetype"), url("./fonts/NeueAlteGrotesk-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Nunito";
+    src: local("Nunito"), url("./fonts/Nunito-Bold.ttf") format("truetype"), url("./fonts/Nunito-Regular.ttf") format("truetype"), url("./fonts/Nunito-ExtraBold.ttf") format("truetype"), url("./fonts/Nunito-SemiBold.ttf") format("truetype");
+  }
+}
+
+li {
+  list-style: none;
+  /* Remove default bullets */
+}
+
+li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #36d560;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  font-size: 25px;
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: 1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.navigation {
+  width: 100% !important;
+  background: transparent !important;
+  z-index: 2;
+  position: fixed !important;
+  /* top: 0 !important;  */
+}
+
+.navigation.active {
+  background: white !important;
+}
+
+.goUpBtn {
+  width: 70px;
+  height: 70px;
+  bottom: 50px;
+  right: 50px;
+  position: fixed !important;
+  z-index: 2 !important;
+  background: white !important;
+  border-radius: 100px !important;
+  border-color: #8D1B3D !important;
+  border-width: 2px !important;
+}
+
+.goUpBtn:hover {
+  background: #8D1B3D !important;
+}
+
+.smGoUpBtn {
+  width: 50px;
+  height: 50px;
+  bottom: 25px;
+  right: 30px;
+  position: fixed !important;
+  z-index: 2 !important;
+  background: white !important;
+  border-radius: 100px !important;
+  border-color: #8D1B3D !important;
+  border-width: 2px !important;
+}
+
+.smGoUpBtn:hover {
+  background: #8D1B3D !important;
+}
